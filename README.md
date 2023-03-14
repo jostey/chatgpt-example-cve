@@ -16,3 +16,12 @@ We need to use the Python openai library and have a usable OpenAI token.
 ```
 openai.api_key = "API_KEY" # https://platform.openai.com/account/api-keys
 ```
+#### Requirements
+To install the dependencies you can install them with the following command:
+```
+$ pip install --upgrade openai
+```
+or
+```
+$ pip install -r requirements.txt
+```
