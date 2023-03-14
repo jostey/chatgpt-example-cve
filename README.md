@@ -33,9 +33,9 @@ Added the possibility that they can be a list of products with their associated 
 ```
 
 ### Installation
-We need to use the Python openai library and have a usable OpenAI token.
+We need to use the Python openai library and have a usable OpenAI API Key: https://platform.openai.com/account/api-keys
 ```
-openai.api_key = "API_KEY" # https://platform.openai.com/account/api-keys
+openai.api_key = "API_KEY" 
 ```
 #### Requirements
 To install the dependencies you can install them with the following command:
