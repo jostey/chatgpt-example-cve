@@ -13,7 +13,7 @@ A: GitLab CE/EE 15.3-15.7.8, 15.8-15.8.4 y 15.9-15.9.2
 
 ### v.0.2
 ```
-A: {{"product": "pimcore", "version": "antes de 10.5.19."}}
+A: {"product": "pimcore", "version": "antes de 10.5.19."}
 ```
 I have changed the output to JSON for better output processing.
 
