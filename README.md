@@ -17,6 +17,21 @@ A: {"product": "pimcore", "version": "antes de 10.5.19."}
 ```
 I have changed the output to JSON for better output processing.
 
+### v.0.3
+Added the possibility that they can be a list of products with their associated versions.
+```
+[
+  {
+    "product": "Oracle Java SE",
+    "versions": "7u321, 8u311, 11.0.13 y 17.01"
+  },
+  {
+    "product": "Oracle GraalVM Enterprise Edition",
+    "versions": "20.3.4 y 21.3.0"
+  }
+]
+```
+
 ### Installation
 We need to use the Python openai library and have a usable OpenAI token.
 ```
