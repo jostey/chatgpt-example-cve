@@ -7,9 +7,9 @@ def generate_prompt(input):
     Q: A double-free was found in the way 389-ds-base handles virtual attributes context in persistent searches.
     A: No se indica.
     Q: Cross-site Scripting (XSS) - Stored in GitHub repository pimcore/pimcore prior to 10.5.19.
-    A: GitHub repository antes de 10.5.19.
+    A: pimcore antes de 10.5.19.
     Q: A issue has been discovered in GitLab CE/EE affecting all versions from 15.3 prior to 15.7.8, version 15.8 prior to 15.8.4, and version 15.9 prior to 15.9.2 A cross-site scripting vulnerability was found in the title field of work it...
-    A: GitLab CE/EE 15.3-15.7.8, 15.8-15.8.4, 15.9-15.9.2
+    A: GitLab CE/EE 15.3-15.7.8, 15.8-15.8.4 y 15.9-15.9.2
     Q: {}
     A: """.format(
         input)
