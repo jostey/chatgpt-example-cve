@@ -1,5 +1,11 @@
 import openai
 
+# VARS
+# Source: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27581
+INPUT = "github-slug-action is a GitHub Action to expose slug value of GitHub environment variables inside of one's GitHub workflow. Starting in version 4.0.0` and prior to version 4.4.1, this action uses the `github.head_ref` parameter in an insecure way. This vulnerability can be triggered by any user on GitHub on any workflow using the action on pull requests. They just need to create a pull request with a branch name, which can contain the attack payload. This can be used to execute code on the GitHub runners and to exfiltrate any secrets one uses in the CI pipeline. A patched action is available in version 4.4.1. No workaround is available. "
+# https://platform.openai.com/account/api-keys
+openai.api_key = "API_KEY"
+
 def generate_prompt(input):
     return """Obtener productos y versiones en ESPAÑOL. Ejemplos.
     Q: IBM Business Automation Workflow 18.0.0, 18.0.1, 18.0.2, 19.0.1, 19.0.2, 19.0.3, 20.0.1, 20.0.2, 20.0.3, 21.0.1, 21.0.2, 21.0.3 y 22.0.1 es vulnerable a la falsificación de solicitudes entre sitios que podría permitir a un atacante ejecutar acciones maliciosas y no autorizadas transmitidas desde un usuario en el que confía el sitio web.
@@ -14,12 +20,9 @@ def generate_prompt(input):
     A: """.format(
         input)
 
-# Source: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27581
-input_str = "github-slug-action is a GitHub Action to expose slug value of GitHub environment variables inside of one's GitHub workflow. Starting in version 4.0.0` and prior to version 4.4.1, this action uses the `github.head_ref` parameter in an insecure way. This vulnerability can be triggered by any user on GitHub on any workflow using the action on pull requests. They just need to create a pull request with a branch name, which can contain the attack payload. This can be used to execute code on the GitHub runners and to exfiltrate any secrets one uses in the CI pipeline. A patched action is available in version 4.4.1. No workaround is available. "
-openai.api_key = "API_KEY" # https://platform.openai.com/account/api-keys
 completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": generate_prompt(input_str)}]
+    messages=[{"role": "user", "content": generate_prompt(INPUT)}]
 )
 
 print(completion.choices[0].message.content)
