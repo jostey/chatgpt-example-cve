@@ -11,6 +11,12 @@ Q: A issue has been discovered in GitLab CE/EE affecting all versions from 15.3 
 A: GitLab CE/EE 15.3-15.7.8, 15.8-15.8.4 y 15.9-15.9.2
 ```
 
+### v.0.2
+```
+A: {{"product": "pimcore", "version": "antes de 10.5.19."}}
+```
+I have changed the output to JSON for better output processing.
+
 ### Installation
 We need to use the Python openai library and have a usable OpenAI token.
 ```
@@ -20,6 +26,7 @@ openai.api_key = "API_KEY" # https://platform.openai.com/account/api-keys
 To install the dependencies you can install them with the following command:
 ```
 $ pip install --upgrade openai
+$ pip install json
 ```
 or
 ```
